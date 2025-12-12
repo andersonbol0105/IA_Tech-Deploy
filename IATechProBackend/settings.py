@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','IATechProBackend.onrender.com','onrender.com','34.83.64.96']
+ALLOWED_HOSTS = ['*','IATechProBackend.onrender.com','onrender.com','34.83.64.96','railway.app']
 
 
 # Application definition
