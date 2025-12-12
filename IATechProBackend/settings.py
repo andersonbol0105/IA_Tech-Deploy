@@ -31,7 +31,21 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','IATechProBackend.onrender.com','onrender.com','34.83.64.96','railway.app']
+#ALLOWED_HOSTS = ['*','IATechProBackend.onrender.com','onrender.com','34.83.64.96','.railway.app']
+ALLOWED_HOSTS = [
+    "*",
+    "IATechProBackend.onrender.com",
+    "onrender.com",
+    "34.83.64.96",
+    "railway.app",
+    ".railway.app",   # wildcard para qualquer subdomínio do Railway
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app",
+    "https://IATechProBackend.onrender.com",
+]
+
 
 
 # Application definition
