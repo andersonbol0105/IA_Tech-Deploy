@@ -42,10 +42,9 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.railway.app",
+    "https://iatech-deploy-production.up.railway.app",
     "https://IATechProBackend.onrender.com",
 ]
-
 
 
 # Application definition
@@ -199,3 +198,7 @@ SIMPLE_JWT = {
 }
 CORS_ALLOW_ALL_ORIGINS = True  # para testes, depois pode restringir
 
+
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
