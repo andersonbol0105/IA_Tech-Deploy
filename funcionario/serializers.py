@@ -10,6 +10,12 @@ class FuncionarioSerializer(serializers.ModelSerializer):
     nome = serializers.CharField(source="user.first_name", read_only=True)
     email = serializers.CharField(source="user.email", read_only=True)
     cpf_cnpj = serializers.CharField(source="user.cpf_cnpj", read_only=True)
+    username = serializers.CharField(source="user.username", read_only=True)  # ADICIONE
+    telefone = serializers.CharField(source="user.telefone", read_only=True)  # ADICIONE
+    logradouro = serializers.CharField(source="user.logradouro", read_only=True)  # ADICIONE
+    cep = serializers.CharField(source="user.cep", read_only=True)  # ADICIONE
+    cidade = serializers.CharField(source="user.cidade", read_only=True)  # ADICIONE
+    estado = serializers.CharField(source="user.estado", read_only=True)  # ADICIONE
 
     class Meta:
         model = Funcionario
@@ -18,13 +24,17 @@ class FuncionarioSerializer(serializers.ModelSerializer):
             "nome",
             "email",
             "cpf_cnpj",
+            "username",      # ADICIONE
+            "telefone",      # ADICIONE
+            "logradouro",    # ADICIONE
+            "cep",           # ADICIONE
+            "cidade",        # ADICIONE
+            "estado",        # ADICIONE
             "cargo",
             "especialidade",
             "salario",
             "data_admissao",
         ]
-
-
 class FuncionarioCreateSerializer(serializers.Serializer):
     """
     Serializer de criação que também cria o usuário automaticamente.
