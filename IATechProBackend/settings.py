@@ -116,14 +116,13 @@ DATABASES = {
         'PASSWORD': os.getenv('PASSWORD_PG'),
         'HOST': os.getenv('HOST_PG'),
         'PORT': os.getenv('PORT_PG'),
-         'OPTIONS': {
-            'sslmode': 'require',  # Use SSL for secture connection
-         
-            
-        }
+        'OPTIONS': {
+            'sslmode': 'require',
+            'connect_timeout': 10,  # ADICIONE
+        },
+        'CONN_MAX_AGE': 60,  # ADICIONE (após a chave 'OPTIONS')
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

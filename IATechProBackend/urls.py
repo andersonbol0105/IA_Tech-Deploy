@@ -10,7 +10,7 @@ urlpatterns = [
     path('api/funcionario/', include('funcionario.urls')),
     path('api/equipamento/', include('equipamento.urls')),
     path('api/os/', include('OrdemdeServico.urls')),
-    path('', include('core.urls'))
+    path('', include('core.urls')),
 
 ]
 
