@@ -81,7 +81,7 @@ class FuncionarioUpdateView(generics.UpdateAPIView):
     @transaction.atomic
     def update(self, request, *args, **kwargs):
         funcionario = self.get_object()
-        serializer = self.get_serializer(data=request.data)
+        serializer = self.get_serializer(data=request.data, partial=True)  # ADICIONE partial=True
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
 
